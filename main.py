@@ -11,6 +11,7 @@ import re
 #   - Labelled --- HACKY BIT ---
 #       - <code> tags not working.
 #       - '-' character is kept same, should act as a breaker like in macdown
+#   - *BUG* Sub directories not fully working when tested on uni work folder
 
 styles = \
 """
@@ -460,6 +461,6 @@ def create_index_page(dirs):
 
     return ''.join(html_list)
 
-main('/Users/tobydixon/Documents/# Uni - 3rd Year/CSC3831/Lectures')
+main('/Users/tobydixon/Documents/# Uni - 3rd Year/')
 # main()
 # main('/Users/tobydixon/Documents/# Uni - 3rd Year/CSC3833/Lectures')
