@@ -4,8 +4,10 @@ import os
 # TODO:
 # - Open a given directory
 #   - For each child, if file is .md then convert to html, if folder then enter it recursively | DONE
-#   - Convert each md into an html file and store all new html in a new folder
-#   - Create a contents page for each html file and sub directory
+#   - Convert each md into an html file and store all new html in a new folder | DONE
+#   - Create a contents page for each html file and sub directory | DONE
+#   - Add Styling to html
+#   - *BUG* passing directory doesnt currently work. -FIX-
 
 # Prints each file in directory
 def main(dir=os.getcwd()):
@@ -96,5 +98,4 @@ def create_index_page(dirs):
 
 
 
-main()
-# create_index_page()
+main('/Users/tobydixon/Documents/# Uni - 3rd Year/CSC3831/Lectures')
