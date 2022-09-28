@@ -7,10 +7,13 @@ import os
 #   - Convert each md into an html file and store all new html in a new folder | DONE
 #   - Create a contents page for each html file and sub directory | DONE
 #   - Add Styling to html
-#   - *BUG* passing directory doesnt currently work. -FIX-
 
 # Prints each file in directory
 def main(dir=os.getcwd()):
+
+    # Set working directory
+    os.chdir(dir)
+
     # Gather all markdown files
 
     res = []
@@ -31,6 +34,7 @@ def main(dir=os.getcwd()):
 
     # Read the files labelled .md, convert to html and store
     for path in res:
+        print(res)
         if (path[-3:] == '.md'):
             with open(path) as f:
                 html[path[:-3] + '.html'] = convert_to_html(f.read())
